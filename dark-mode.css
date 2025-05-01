@@ -1,0 +1,710 @@
+/* Comment: Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    background-color: #333;
+  }
+  
+  /* Comment: Container for layout */
+  .container {
+    padding: .3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    
+  }
+  
+  /* Comment: Header design */
+  header {
+    width: 100%;
+    background-color:	#0d0d0d;
+    color: #f0f0f0;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+   padding-bottom: 1%;
+  }
+  section{
+    border-bottom:12px solid rgba(0, 0, 0, 0.09);; ;
+  }
+
+  .logo{
+    align-self: center;
+  }
+  /* Comment: Logo styling */
+  .logo h1 {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 700;
+  }
+  .nav-links{
+    width: 100%;
+  }
+  
+  /* Comment: Navigation styles */
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(128, 128, 128); /* soft gray on hover */
+  }
+  
+
+  
+  /* -------------- New Toggle Switch Button (Better looking) -------------- */
+  
+  /* Comment: Toggle Switch Container */
+  .toggle-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  /* Comment: Outer Toggle Button */
+  .toggle-button {
+    width: 21%;
+    margin-bottom: 1%;
+    border-radius: 2em;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+   
+  }
+  
+  /* Comment: Inner parts for light and dark mode */
+  .toggle-part {
+    width: 50%;
+    padding: 12% 0;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    
+  }
+  
+  /* Comment: Light side (Moon) */
+  .light {
+    background-color: rgb(50, 60, 80); /* dark blue-gray */
+
+  }
+  
+  /* Comment: Dark side (Sun) */
+  .dark {
+    background-color: #ecf2e9; /* bright cyan */
+
+  }
+  /* Comment: Home Section Styling */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 0;
+  }
+  
+  /* Comment: Home section container */
+  .home-container {
+    width: 90%;
+    color: #f0f0f0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* wrap elements on smaller screens */
+  }
+  
+  /* Comment: Left side of the Home Section */
+  .home-left {
+    flex: 1;
+    padding-right: 3%;
+  }
+  
+  /* Comment: Heading */
+  .home-left h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+  
+  /* Comment: Intro Text */
+  .home-left p {
+    font-size: 1.2em;
+  }
+  
+  /* Comment: Right side of the Home Section */
+  .home-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Comment: Profile Image */
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Comment: Profile Image Hover Effect */
+  .profile-img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Comment: Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .social-icon {
+    font-size: 1.5em;
+    color: rgb(100, 100, 100); /* dark gray */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: rgb(78, 108, 80); /* deep earthy green on hover */
+  }
+  
+  /* Comment: Download Resume Button */
+  .download-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #ff7f50; /* deep earthy green */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #f88c64; /* darker shade on hover */
+  }
+  /* Comment: About Section Styling */
+#about {
+    background-color: #333;
+    padding: 6% 0;
+  }
+  
+  /* Comment: Container to layout image and content */
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .about-img-wrapper{
+    width: 100%;
+
+  }
+  /* Comment: Profile image styling */
+  .about-img {
+    width: 100%;
+
+    border-radius:2rem;
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Added box-shadow transition */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft floating shadow */
+  }
+  
+  /* Comment: Hover animation for image */
+  .about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+  }
+  
+  /* Comment: Text content styling */
+  .about-content {
+    flex: 1;
+    margin-left: 5%;
+  }
+  
+  .about-content h2 {
+    font-size: 2em;
+    color: #f0f0f0;
+    margin: 2% 0;
+  }
+  
+  .about-content p {
+    font-size: 1.1em;
+    color: #f0f0f0;
+    line-height: 1.6em;
+  }
+  
+  /* Comment: Read More Button */
+  .read-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #f88c64;
+  }
+  .section-headings{
+    width: 100%;
+    text-align: center;
+  }
+  .section-headings h2{
+    color: 	#f0f0f0;
+    font-size: 2em;
+    margin-top: 4%;
+    text-align: center;
+
+  }
+  /* Comment: Skills section layout */
+.skills-container {
+    padding: 5% 0;
+    justify-content: center;
+    background-color: #333;
+  }
+
+
+  
+  /* Comment: Skill item container */
+  .skill {
+    margin-bottom: 4%;
+    width: 90%;
+  }
+  
+  /* Comment: Label above progress bar */
+  .skill span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1%;
+    color: #f0f0f0;
+  }
+  
+  /* Comment: Outer progress bar background */
+  .progress-bar {
+    width: 100%;
+    height: 1em;
+    background-color: #e0e0e0;
+    border-radius: 1em;
+    overflow: hidden;
+  }
+  
+  /* Comment: Actual filled progress */
+  .progress {
+    height: 100%;
+    background-color: #1f930a;
+    border-radius: 1em 0 0 1em;
+    transition: width 1s ease-in-out; /* Smooth loading animation */
+  }
+  
+  /* Comment: Certifications section styling */
+.certs-container {
+    text-align: center;
+    padding: 5% 0;
+    background-color: #333;
+    color: #f0f0f0;
+
+  }
+  .cert-header{
+    width: 100%;
+    text-align: center;
+    }
+  
+  /* Comment: Section heading */
+
+  
+  /* Comment: Certificate card layout */
+  .cert-card {
+    background-color: #4d4d4d;
+    border-radius: 1.5em;
+    box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.1);
+    padding: 7%;
+    margin: 7% auto;
+    width: 90%;
+    max-width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Comment: Hover effect on card */
+  .cert-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.8em 1.6em rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Comment: Certificate button */
+  .cert-btn {
+    display: inline-block;
+    margin-top: 5%;
+    padding: 5%;
+    background-color: #4e6c50;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cert-btn:hover {
+    background-color: #3b5840;
+  }
+  /* Comment: Projects Section Container */
+/* Comment: Projects Section Container */
+#projects {
+    width: 100%;
+    margin: auto;
+    padding: 5% 0;
+    background-color: #333;
+  }
+
+  
+  /* Comment: Flex container for cards */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .projects-container h2{
+    margin-bottom: 7%;
+    margin-top: 0;
+  }
+  
+  /* Comment: Card container */
+  .project-card {
+    width: 100%;
+    position: relative; /* needed for absolute positioning inside */
+    overflow: hidden;
+    border-radius: 2%;
+    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5%;
+  }
+  
+  /* Comment: Card Hover Effect */
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.8em 1.6em rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Comment: Project Image */
+  .project-card img {
+    width: 100%;
+    height: 290px;
+    display: block;
+  }
+  
+  /* Comment: Text and Button overlay */
+  .project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    color: white;
+
+   
+  }
+  
+  /* Comment: Show text on hover */
+  .project-card:hover .project-info {
+    opacity: 1;
+  }
+  
+  /* Comment: Project Title */
+  .project-info h3 {
+    margin-bottom: 5%;
+    font-size: 1.5em;
+  }
+  
+  /* Comment: View Project Button */
+  .view-project-btn {
+    padding: 2% 5%;
+    background-color: rgb(78, 108, 80);
+    color: white;
+    text-decoration: none;
+    border-radius: 1em;
+    font-size: 1em;
+    /* transition: b 0.3s ease; */
+  }
+  
+  /* Comment: Hover Effect for Button */
+  .view-project-btn:hover {
+    background-color: rgb(60, 80, 60);
+  }
+  /* Comment: Contact Section Layout */
+#contact {
+    width: 90%;
+    margin:10% auto;
+    padding: 1% 0;
+    background-color: #4d4d4d;
+
+  }
+  #contact h2{
+    margin-bottom: 3%;
+  }
+  
+
+  
+  /* Comment: Form Styling */
+  form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .form-group{
+    margin-bottom: 3%;
+  }
+  /* Comment: Input and Textarea Styling */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 2%;
+    border: 0.1em solid rgb(200, 200, 200);
+    border-radius: 1em;
+    font-size: 1em;
+    resize: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none; /* Removes default outline */
+    border-color: rgb(78, 108, 80); /* Deep green border */
+    box-shadow: 0 0 1em rgba(78, 108, 80, 0.4); /* Soft glow effect */
+  }
+  .form-group textarea{
+    border-radius: 0;
+  }
+  
+  /* Comment: Submit Button Styling */
+  .submit-btn {
+    width: 50%;
+    margin: auto;
+    margin-top: 3%;
+    padding: 2% 0;
+    background-color: rgb(78, 108, 80);
+    color: white;
+    border: none;
+    border-radius: 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* Comment: Hover Effect on Button */
+  .submit-btn:hover {
+    background-color: rgb(60, 80, 60);
+  }
+  
+  /* Comment: Responsive Adjustments */
+  
+    form {
+      width: 90%;
+    }
+  
+  
+  
+  /* Comment: Footer section styling */
+footer {
+    width: 100%;
+    margin-top: 9%;
+    background-color: 	#0d0d0d ; /* soft beige */
+    padding-bottom: 3%;
+    text-align: center;
+    color: white;
+
+  }
+  
+  /* Comment: Footer container layout */
+  .footer-container {
+    width: 90%;
+    margin: auto;
+  }
+  
+  /* Comment: Footer buttons layout */
+  .footer-buttons {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+  
+  /* Comment: Footer Button Styling */
+  .footer-btn {
+    padding: 2% 4%;
+    background-color: rgb(78, 108, 80);
+    color: white;
+    text-decoration: none;
+    border-radius: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Comment: Hover effect for footer buttons */
+  .footer-btn:hover {
+    background-color: rgb(50, 60, 80); /* darker on hover */
+    transform: scale(1.05);
+  }
+  
+  
+/*   
+  /* -------------- Media Queries for Responsive Design -------------- */
+  
+  @media (min-width: 1024px) {
+    .container{
+        padding: 1%;
+        flex-direction: row;
+    }
+    .logo-nav-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .logo{
+        width: 58%;
+    }
+    .logo h1{
+        font-size: 1.6em;
+
+    }
+    .nav-links ul{
+       
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    .nav-links a{
+        font-size: 1.2em;
+    }
+    .toggle-wrapper {
+        width: 46%;
+        display: block;
+    }
+    .toggle-button {
+        width: 15%;
+    }
+    #home {
+      flex-direction: row; /* side-by-side layout for laptops */
+      padding: 5% 0;
+      margin-top: 80px; 
+      background-color: #333;
+    }
+  
+    .home-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .home-left, .home-right {
+      flex: 1;
+      padding: 2%;
+    }
+  .home-right{
+    background-color: #4d4d4d; /* bright cyan */
+    border-radius: 1em;
+  }
+    .home-right h2 {
+      font-size: 4em; /* bigger heading */
+    }
+  
+    .home-right p {
+      font-size: 2em; /* slightly bigger intro text */
+    }
+    .social-icon {
+        font-size: 3em;
+    }
+    .profile-img {
+      width: 250px;
+      height: 250px;
+    }
+    .about-img-wrapper {
+        width: 50%;
+    }
+    .skill span{
+        font-size: 2em;
+    }
+    .card-container{
+        display: flex;
+        gap: 8%;
+    }
+    .certs-container{
+        padding: 0 8%;
+    }
+    .cert-card{
+        padding: 5%;
+    }
+    .projects-container{
+        display: flex;
+    }
+    .form-group1{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1%;
+    }
+    .form-group1 .form-group{
+        width: 49%;
+    }
+    .form-group textarea {
+        width: 49%;
+    }
+    .submit-btn {
+        width: 20%;
+    }
+    footer{
+        padding: .5% 0;
+    }
+    .footer-btn {
+        padding: 1% 3%;
+    }
+    .footer-buttons {
+        margin-top: .5%;
+    }
+  }
+  
+
+  
+
+  
